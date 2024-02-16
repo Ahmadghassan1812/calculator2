@@ -40,12 +40,12 @@ input{
 }
 button{
     height: 48px;
-    width: 48px;
+    width: 58px;
     background-color: gray;
     box-shadow: -5px -5px 12px #ecf0f3
                  5px 5px 12px rgba(0,0,0,.16);
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     margin: 8px;
     font-size: 16px;              
 }
