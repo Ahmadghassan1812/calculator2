@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-       
-        <link rel="stylesheet" href="calculator.css">
+       <meta charset="UTF-8">
+       <meta content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="first.css">
         <title>calculator</title>
+
     </head>
     <body>
         <div class="container">
             <div class="calculator">
                 <input type="text" placeholder="0" id="output-screen">
                 <button onclick="clear()">CL</button>
-                <button onclick="del()">DELL</button>
-                <button onclick="display('%')"> % </button>
-                <button onclick="display('/')">/</button>
+                <button onclick="fact('x')">x!</button>
+                <button onclick="display('(')"> ( </button>
+                <button onclick="display(')')">)</button>
+                <button onclick="display('%')">%</button>
+                <button onclick="del('del')">DEL</button>
+                <button onclick="sin('x')">sin</button>
+                <button onclick="pi('x')">π </button>
                 <button onclick="display('7')">7</button>
                 <button onclick="display('8')">8</button>
                 <button onclick="display('9')">9</button>
-                <button onclick="display('*')">*</button>
+                <button onclick="display('/')">/</button>
+                <button onclick="cos('x')">cos</button>
+                <button onclick="log('x')">log</button>
                 <button onclick="display('4')">4</button>
                 <button onclick="display('5')">5</button>
                 <button onclick="display('6')">6</button>
-                <button onclick="display('-')">-</button>
+                <button onclick="display('*')">*</button>
+                <button onclick="tan('x')">tan</button>
+                <button onclick="sqrt('x')">√</button>
                 <button onclick="display('1')">1</button>
                 <button onclick="display('2')">2</button>
                 <button onclick="display('3')">3</button>
-                <button onclick="display('+')">+</button>
-                <button onclick="display('.')">.</button>
-                <button onclick="display('0')">0</button>
-                <button onclick="calculate()" class="equal" >=</button>
-                <button onclick="" class="imbty">   </button> 
-                <button onclick="display('(')">(</button> 
-                <button onclick="display(')')">)</button>
+                <button onclick="display('-')">-</button>
+                <button onclick="e('x')">e</button>
+               <button onclick="pow('x,y')">x^2</button>
+               <button onclick="display('0')">0</button>
+               <button onclick="display('.')">.</button>
+               <button onclick="calculate()" class="equal" >=</button>
+               <button onclick="display('+')">+</button>
+                
+                
                
             </div>
         </div>
@@ -54,8 +66,48 @@
                 outputscreen.value= outputscreen.value.slice(0,-1);
             }
             
+            function pow(){
+                outputscreen.value=Math.pow(outputscreen.value,2)
+            }
+            function sin(){
+                outputscreen.value=Math.sin(outputscreen.value)
+            }
+            function cos(){
+                outputscreen.value=Math.cos(outputscreen.value)
+            }
+            function tan(){
+                outputscreen.value=Math.tan(outputscreen.value)
+            }
+            function log(){
+                outputscreen.value=Math.log(outputscreen.value)
+            }
+            function pi(){
+                outputscreen.value=3.14;
+            }
+            function e(){
+                outputscreen.value=2.71;
+            }
+            function sqrt(){
+                outputscreen.value=Math.sqrt(outputscreen.value)
+            }
+            function fact(){
+                var i, num, z;
+                z=1
+                num=outputscreen.value;
+                for(i=1;i<=num;i++)
+                {
+                    z=z*i;
+                }
+                i=i-1;
+                outputscreen.value=z;
+            }
+
+            
+            
+            
             
             
         </script>
+       
     </body>
 </html>
