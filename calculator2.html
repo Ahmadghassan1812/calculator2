@@ -3,7 +3,7 @@
     <head>
        <meta charset="UTF-8">
        <meta content="width=device-width", initial-scale="1.0">
-        <link rel="stylesheet" href="first.css">
+        <link rel="stylesheet" href="1.css">
         <title>calculator</title>
 
     </head>
@@ -11,12 +11,12 @@
         <div class="container">
             <div class="calculator">
                 <input type="text" placeholder="0" id="output-screen">
-                <button onclick="clear()">CL</button>
+                <button onclick="del('del')">DEL</button>
                 <button onclick="fact('x')">x!</button>
                 <button onclick="display('(')"> ( </button>
                 <button onclick="display(')')">)</button>
                 <button onclick="display('%')">%</button>
-                <button onclick="del('del')">DEL</button>
+                <button onclick="cl('')" class="AC">AC</button>
                 <button onclick="sin('x')">sin</button>
                 <button onclick="pi('x')">π </button>
                 <button onclick="display('7')">7</button>
@@ -59,7 +59,7 @@
                     alert("INVALID")
                 }
             }
-            function clear(){
+            function cl(){
                 outputscreen.value=0;
             }
             function del(){
